@@ -6,6 +6,7 @@
     <title>Unity WebGL Player | apartment_02</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="reactBridge.js"></script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -119,6 +120,7 @@
                 fullscreenButton.onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
+                  setupReactBridge(unityInstance); // 👈 connect React bridge
               }).catch((message) => {
                 alert(message);
               });
